@@ -29,7 +29,7 @@ const getSongByPlaylistId = async (req, res) => {
   try {
     const songs = await Song.findAll({
       where: { playlistId: req.params.playlist_id },
-      include: [{ model: User, foreignKey: 'playlistId' }]
+      include: [{ model: Playlist, foreignKey: 'playlistId' }]
     })
     res.send(songs)
   } catch (error) {
