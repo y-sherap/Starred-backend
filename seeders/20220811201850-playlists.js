@@ -1,6 +1,8 @@
-'use strict';
+'use strict'
 
 module.exports = {
+
+
   async up (queryInterface, Sequelize) {
  
      await queryInterface.bulkInsert('playlists', 
@@ -31,9 +33,9 @@ module.exports = {
         updateAt: new Date()
       }
     ], {});
-  },
-  async down (queryInterface, Sequelize) {
-  await queryInterface.bulkDelete('playlists', null, {});
 
+  },
+  async down(queryInterface, Sequelize) {
+    await queryInterface.bulkDelete('playlists', null, {})
   }
-};
+}
