@@ -1,19 +1,20 @@
 const Router = require('express').Router()
 const controller = require('../controllers/SongController')
+const middleware = require('../middleware')
 
-Router.post('/:playlist_id', controller.createSong,
+Router.post('/:playlist_id', 
 middleware.stripToken,
 middleware.verifyToken,
-controller.getAllPlaylist)
+controller.createSong,)
 
-Router.delete('/:song_id', controller.deleteSong,
+Router.delete('/:song_id',
 middleware.stripToken,
 middleware.verifyToken,
-controller.getAllPlaylist)
+controller.deleteSong,)
 
-Router.get('/:playlist_id/:song_id', controller.getSongByPlaylistId,
+Router.get('/:playlist_id/:song_id',
 middleware.stripToken,
 middleware.verifyToken,
-controller.getAllPlaylist)
+controller.getSongByPlaylistId,)
 
 module.exports = Router
