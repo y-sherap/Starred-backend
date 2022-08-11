@@ -3,6 +3,7 @@
 module.exports = {
 
 
+
   async up (queryInterface, Sequelize) {
      await queryInterface.bulkInsert('playlists', 
      [
@@ -32,6 +33,7 @@ module.exports = {
         updatedAt: new Date()
       }
     ], {});
+
 
   },
   async down(queryInterface, Sequelize) {
