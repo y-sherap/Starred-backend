@@ -9,19 +9,24 @@ module.exports = {
         name: "Luke Richardson",
         email: "lrichardson@gmail.com",
         username: "lrichardson",
-        password: "1234"
+        password: "1234",
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         name: "Yangtsel Sherap",
         email: "yangtsel.sherap@gmail.com",
         username: "ysherap",
-        password: "5678"
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
       {
         name: "Will Fitzgerald",
         email: "wfitzgeraldn@gmail.com",
         username: "williamsquilliam",
-        password: "12345"
+        password: "12345",
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
     ], {});
   },
