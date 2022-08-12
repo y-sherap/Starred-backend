@@ -22,5 +22,4 @@ Router.get(
   middleware.verifyToken,
   controller.getSongByPlaylistId
 )
-
 module.exports = Router

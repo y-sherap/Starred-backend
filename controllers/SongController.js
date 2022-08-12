@@ -1,5 +1,5 @@
 const { Song } = require('../models')
-
+const axios = require('axios')
 const createSong = async (req, res) => {
   try {
     let playlistId = req.params.playlist_id
@@ -36,7 +36,6 @@ const getSongByPlaylistId = async (req, res) => {
     throw error
   }
 }
-
 
 module.exports = {
   createSong,
