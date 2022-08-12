@@ -8,6 +8,10 @@ Router.get(
   middleware.verifyToken,
   controller.getAllPlaylist
 )
+Router.get(
+  '/:user_id',
+  controller.getPlaylistByUser
+)
 Router.post(
   '/:user_id',
   middleware.stripToken,
@@ -26,5 +30,6 @@ Router.delete(
   middleware.verifyToken,
   controller.deletePlaylist
 )
+
 
 module.exports = Router

@@ -2,7 +2,7 @@ const { Playlist } = require('../models')
 
 const createPlaylist = async (req, res) => {
   try {
-    let userId = req.params.user_id
+    let userId = parseInt(req.params.user_id)
     let playlistBody = {
       userId,
       ...req.body
@@ -17,6 +17,16 @@ const createPlaylist = async (req, res) => {
 const getAllPlaylist = async (req, res) => {
   try {
     let allPlaylists = await Playlist.findAll()
+    res.send(allPlaylists)
+  } catch (error) {
+    throw error
+  }
+}
+
+const getPlaylistByUser = async (req, res) => {
+  try {
+    user_Id = parseInt(req.params.user_id)
+    let allPlaylists = await Playlist.findAll({where: { userId: user_Id }})
     res.send(allPlaylists)
   } catch (error) {
     throw error
@@ -51,5 +61,6 @@ module.exports = {
   getAllPlaylist,
   createPlaylist,
   updatePlaylist,
-  deletePlaylist
+  deletePlaylist,
+  getPlaylistByUser
 }
