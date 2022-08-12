@@ -10,6 +10,8 @@ Router.get(
 )
 Router.get(
   '/:user_id',
+  middleware.stripToken,
+  middleware.verifyToken,
   controller.getPlaylistByUser
 )
 Router.post(
