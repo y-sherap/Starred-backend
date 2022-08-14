@@ -17,9 +17,10 @@ Router.delete(
 )
 
 Router.get(
-  '/:playlist_id/:song_id',
+  '/:playlist_id',
   middleware.stripToken,
   middleware.verifyToken,
   controller.getSongByPlaylistId
 )
 module.exports = Router
+  
