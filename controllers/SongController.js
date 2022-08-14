@@ -24,7 +24,6 @@ const deleteSong = async (req, res) => {
   }
 }
 
-
 const getSongByPlaylistId = async (req, res) => {
   try {
     const songs = await Song.findAll({
@@ -42,6 +41,3 @@ module.exports = {
   deleteSong,
   getSongByPlaylistId
 }
-
-
-
