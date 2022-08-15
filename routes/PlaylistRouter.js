@@ -4,8 +4,6 @@ const middleware = require('../middleware')
 
 Router.get(
   '/all',
-  middleware.stripToken,
-  middleware.verifyToken,
   controller.getAllPlaylist
 )
 Router.get(
