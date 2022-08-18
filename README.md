@@ -79,19 +79,11 @@ This application is built for users interested in discovering new music.
 
 
 ---
-![Header](https://repository-images.githubusercontent.com/248812720/56902700-c5bd-11ea-813f-ed8631377258)
+
 ---
 
 #### *Description*
 
-A PERN application that allows users to:
-* create an account to create and save playlists
-* add songs to a playlist 
-* perform full CRUD applications on their playlists
-* search for songs through a 3rd party API to add to their playlist
-
-
-View the project [HERE](LINK HERE)
 
 ***
 #### *Technologies Used*
