@@ -1,6 +1,9 @@
 {
   "name": "starred-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "description": "**[Website]() | [GitHub](https://github.com/y-sherap/Starred-React)**",
   "main": "app.js",
   "scripts": {
