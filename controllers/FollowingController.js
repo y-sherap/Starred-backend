@@ -11,7 +11,7 @@ const newFollower = async (req,res) => {
 }
 const getFollowingPlaylists = async(req,res) =>{
     try{
-       const  {userId} = req.body
+        const  userId = req.params.userId
         const playlists = await User.findAll({
             where : {id:userId},
             include :[
@@ -27,8 +27,20 @@ const getFollowingPlaylists = async(req,res) =>{
         console.error(e)
     }
 }
+const removeFollowingPlaylist = async(req,res) =>{
+    try{
+        const user = req.params.userId
+        const playlist = req.params.playlistId
+         await followingPlaylist.destroy({where:{userId:user,playlistId:playlist}})
+        res.status(200).send('success')
+    }catch(e){
+        console.error(e)
+
+    }
+}
 
 module.exports = {
     newFollower,
-    getFollowingPlaylists
+    getFollowingPlaylists,
+    removeFollowingPlaylist
 }

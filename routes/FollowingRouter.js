@@ -7,10 +7,14 @@ const middleware = require('../middleware')
         middleware.verifyToken,
         controller.newFollower)
 
-    Router.get('/following',
+    Router.get('/following/:userId',
         middleware.stripToken,
         middleware.verifyToken,
         controller.getFollowingPlaylists)
 
-
+    Router.delete('/:userId/:playlistId',
+    middleware.stripToken,
+    middleware.verifyToken,
+    controller.removeFollowingPlaylist
+    )
 module.exports = Router
