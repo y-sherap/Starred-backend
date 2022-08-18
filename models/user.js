@@ -12,6 +12,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'userId',
         onDelete: 'CASCADE'
       })
+      User.belongsToMany(models.Playlist, {
+        as: 'follower',
+        through: models.followingPlaylist,
+        foreignKey: 'userId'
+      })
     }
   }
   User.init(
