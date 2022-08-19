@@ -33,11 +33,6 @@ A PERN application that allows users to:
 
 #### _Project Overview_
 This application is built for users interested in discovering new music.
-
-
-
-
-
 ---
 
 ### **_Screenshots_**
@@ -45,12 +40,12 @@ This application is built for users interested in discovering new music.
 
 #### **Entity Relationship Diagram**
 
-![ERD](public/ERD_Project3.png)
+![ERD](public/Starred-ERD.png)
 
 
 #### **Component Hierarchy Diagram**
 
-![CHD](public/CHD_Project3.png)
+![CHD](public/Starred-CHD.png)
 
 
 ---
